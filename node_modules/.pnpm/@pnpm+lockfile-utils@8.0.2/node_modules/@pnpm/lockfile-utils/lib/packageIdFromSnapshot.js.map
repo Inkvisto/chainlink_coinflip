@@ -1,0 +1,1 @@
+{"version":3,"file":"packageIdFromSnapshot.js","sourceRoot":"","sources":["../src/packageIdFromSnapshot.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;AAEA,0DAA2C;AAE3C,SAAgB,qBAAqB,CACnC,OAAe,EACf,WAA4B,EAC5B,UAAsB;IAEtB,IAAI,WAAW,CAAC,EAAE;QAAE,OAAO,WAAW,CAAC,EAAE,CAAA;IACzC,OAAO,EAAE,CAAC,eAAe,CAAC,UAAU,EAAE,OAAO,CAAC,IAAI,OAAO,CAAA;AAC3D,CAAC;AAPD,sDAOC"}

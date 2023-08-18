@@ -13,8 +13,12 @@ async function main() {
     );
 
 
-    const [signer] = await ethers.getSigners()
-
+    const [signer] = await ethers.getSigners();
+    console.log("Deploying contracts with the account:", signer.address);
+    console.log(await ethers.provider.getBalance(signer.address));
+    
+    
+/*
     const BASE_FEE = "100000000000000000"
     const GAS_PRICE_LINK = "1000000000" // 0.000000001 LINK per gas
 
@@ -47,7 +51,7 @@ async function main() {
     )
 
     await VRFCoordinatorV2Mock.addConsumer(subscriptionId, coin.target)
-
+*/
     const token = await ethers.deployContract("Ink_Token", { signer });
     const nft = await ethers.deployContract("NFT", ['Ink_NFT', 'INFT', signer], { signer });
     const marketplace = await ethers.deployContract("NFTMarketplace", ['Ink_Marketplace', 'INKM'], { signer });
@@ -57,6 +61,12 @@ async function main() {
     await nft.waitForDeployment();
     await marketplace.waitForDeployment();
 
+
+    console.log('token:',await token.getAddress());
+    console.log('nft:',await nft.getAddress());
+    console.log('market:',await marketplace.getAddress());
+    
+
     const contractsDir = path.join(__dirname, '/../../', 'frontend/contracts')
 
 
@@ -64,8 +74,8 @@ async function main() {
         fs.mkdirSync(contractsDir)
     }
 
-    saveFrontendFiles({ Ink_Token: token, NFT: nft, NFTMarketplace: marketplace, CoinFlip:coin,VRFCoordinatorV2Mock:VRFCoordinatorV2Mock })
-    function saveFrontendFiles(contracts: { Ink_Token: Ink_Token, NFT: NFT, NFTMarketplace: NFTMarketplace, CoinFlip:CoinFlip,VRFCoordinatorV2Mock:VRFCoordinatorV2Mock }) {
+    saveFrontendFiles({ Ink_Token: token, NFT: nft, NFTMarketplace: marketplace })
+    function saveFrontendFiles(contracts: { Ink_Token: Ink_Token, NFT: NFT, NFTMarketplace: NFTMarketplace }) {
         const contractsDir = path.join(__dirname, '/../..', 'frontend/contracts')
 
         if (!fs.existsSync(contractsDir)) {
@@ -96,3 +106,4 @@ main().catch((error) => {
     console.error(error);
     process.exitCode = 1;
 });
+

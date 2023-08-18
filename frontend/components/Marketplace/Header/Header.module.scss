@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    &.div {
+        display: flex;
+        background-color: red;
+        justify-content: space-between;
+    }
+}
+
+.logo{
+    align-self: center;
+    width: 100px;
+    height: 100px;
+}
+
+.icons{
+    display: flex;
+    width:250px;
+    padding: 10px;
+    justify-content: space-between;
+}

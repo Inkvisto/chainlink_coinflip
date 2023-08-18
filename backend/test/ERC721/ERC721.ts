@@ -8,7 +8,7 @@ import expectCustomRevert from "../utils/expectCustomRevert";
 import { AddressLike, BigNumberish, ContractTransactionReceipt, ContractTransactionResponse } from "ethers";
 import { expectEvent } from "../utils/expectEvent";
 import { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers";
-/*
+
 const RevertType = Enum('None', 'RevertWithoutMessage', 'RevertWithMessage', 'RevertWithCustomError', 'Panic');
 
 const firstTokenId = 1n;
@@ -181,4 +181,3 @@ describe('ERC721', () => {
 
 
 
-*/

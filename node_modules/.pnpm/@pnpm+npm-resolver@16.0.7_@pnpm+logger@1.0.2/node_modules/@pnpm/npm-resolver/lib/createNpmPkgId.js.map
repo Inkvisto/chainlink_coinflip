@@ -1,0 +1,1 @@
+{"version":3,"file":"createNpmPkgId.js","sourceRoot":"","sources":["../src/createNpmPkgId.ts"],"names":[],"mappings":";;;;;;AAAA,sEAA4C;AAE5C,SAAgB,WAAW,CACzB,QAAgB,EAChB,OAAe,EACf,UAAkB;IAElB,MAAM,mBAAmB,GAAG,IAAA,yBAAc,EAAC,QAAQ,CAAC,CAAA;IACpD,OAAO,GAAG,mBAAmB,IAAI,OAAO,IAAI,UAAU,EAAE,CAAA;AAC1D,CAAC;AAPD,kCAOC"}

@@ -80,51 +80,6 @@ describe("CoinFlip", async function() {
             requestId,
             coin.target
         )
-
-     
-               
-
-
-
-       
-
-
-/*
-        assert(
-            firstRandomNumber > 0n,
-            "First random number is greater than zero"
-        )
-
-        assert(
-            secondRandomNumber > 0n,
-            "Second random number is greater than zero"
-        )
-    
-        const transaction = await coin.requestRandomWords();
-        const transactionReceipt = await transaction.wait(1);
-        const eventlog = transactionReceipt?.logs ;
-        //const log = eventlog.eventName === 'GeneratedRandomNumber';
-        console.log(eventlog);
-        
-        const randomNumber = log.data;
-    /*
-        const win = randomNumber.mod(2).eq(0);
-        const amountWon = win ? betAmount + 2n : 0n;
-    
-        const playerBalanceBefore = await coin.getPlayerBalance();
-        const contractBalanceBefore = await coin.getContractBalance();
-    
-        await coin.fulfillRandomWords(requestId, [randomNumber]);
-        const playerByAddress = await coin.playersByAddress(player.address);
-    
-        expect(playerByAddress.betOngoing).to.be.false;
-        expect(playerByAddress.betAmount).to.equal(ethers.BigNumber.from(0));
-    
-        const playerBalanceAfter = await coin.getPlayerBalance();
-        const contractBalanceAfter = await coin.getContractBalance();
-    
-        expect(playerBalanceAfter).to.equal(playerBalanceBefore + amountWon);
-        expect(contractBalanceAfter).to.equal(contractBalanceBefore - amountWon);*/
       });
     
 

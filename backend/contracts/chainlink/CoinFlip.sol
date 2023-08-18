@@ -8,6 +8,10 @@ import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
 import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
 import "hardhat/console.sol";
 
+
+
+
+
 contract CoinFlip is Ownable, VRFConsumerBaseV2 {
     VRFCoordinatorV2Interface immutable COORDINATOR;
     LinkTokenInterface LINKTOKEN;
@@ -78,6 +82,7 @@ contract CoinFlip is Ownable, VRFConsumerBaseV2 {
 
     /* Functions:
      *************/
+     
 
     function bet(uint256 _betChoice) public payable betConditions {
         require(_betChoice == 0 || _betChoice == 1, "CoinFlip: Must be 0 or 1");

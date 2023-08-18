@@ -1,0 +1,37 @@
+{
+  "name": "resolve-link-target",
+  "version": "2.0.0",
+  "description": "Resolve a symlink's (or junction's) target",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/resolve-link-target",
+  "keywords": [
+    "symlink",
+    "junction",
+    "link",
+    "target",
+    "absolute",
+    "resolve",
+    "readlink",
+    "fs",
+    "filesystem"
+  ],
+  "author": "Zoltan Kochan",
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/resolve-link-target#readme",
+  "devDependencies": {
+    "standard": "^16.0.3",
+    "symlink-dir": "^4.1.0",
+    "tape": "^5.1.1"
+  }
+}

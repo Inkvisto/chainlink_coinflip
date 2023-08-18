@@ -1,0 +1,2 @@
+import { type LockfileFile } from './write';
+export declare function sortLockfileKeys(lockfile: LockfileFile): LockfileFile;
